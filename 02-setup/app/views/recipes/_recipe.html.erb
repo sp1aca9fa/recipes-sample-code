@@ -1,0 +1,9 @@
+<div class="col">
+  <div class="card" id="<%= dom_id recipe %>">
+    <%= image_tag recipe.photo_url, class: "card-img-top" %>
+    <div class="card-body">
+      <h5 class="card-title"><%= link_to recipe.name, recipe %></h5>
+      <p class="card-text"><%= recipe.description %></p>
+    </div>
+  </div>
+</div>
