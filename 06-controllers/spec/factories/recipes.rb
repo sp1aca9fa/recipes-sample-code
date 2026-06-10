@@ -6,5 +6,8 @@ FactoryBot.define do
     instructions { "Mix the ingredients together" }
     association :category
     association :user
+    trait :invalid do
+      name { nil }
+    end
   end
 end

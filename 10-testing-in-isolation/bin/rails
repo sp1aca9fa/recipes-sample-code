@@ -1,4 +1,9 @@
 #!/usr/bin/env ruby
+
+require "simplecov"
+SimpleCov.start "rails"
+SimpleCov.refuse_coverage_drop
+
 APP_PATH = File.expand_path("../config/application", __dir__)
 require_relative "../config/boot"
 require "rails/commands"

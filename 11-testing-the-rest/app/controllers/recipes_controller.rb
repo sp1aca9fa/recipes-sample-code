@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :require_login
-  before_action :set_recipe, except: %i[ index show new create ]
+  before_action :set_recipe, except: %i[ index show new create popular ]
 
   # GET /recipes or /recipes.json
   def index
@@ -10,6 +10,10 @@ class RecipesController < ApplicationController
   # GET /recipes/1 or /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
+  end
+
+  def popular
+    @recipes = Recipe.by_popularity
   end
 
   # GET /recipes/new
